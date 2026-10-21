@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qui suis-je ? | Madame Élégance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            elegant: {
+              dark: '#0f0f0f',
+              gold: '#c9a962',
+              cream: '#f8f6f1',
+              soft: '#e8e4d9',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-elegant-cream text-elegant-dark font-sans">
+  <nav class="fixed w-full z-50 bg-elegant-dark/90 backdrop-blur-md text-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="font-serif text-2xl font-bold tracking-wider">Madame Élégance</a>
+      <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+        <a href="index.html" class="hover:text-elegant-gold transition">Accueil</a>
+        <a href="about.html" class="hover:text-elegant-gold transition text-elegant-gold">Qui suis-je</a>
+        <a href="portfolio.html" class="hover:text-elegant-gold transition">Mon Book</a>
+        <a href="expositions.html" class="hover:text-elegant-gold transition">Expositions</a>
+        <a href="contact.html" class="hover:text-elegant-gold transition">Contact</a>
+      </div>
+      <button class="md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-elegant-dark px-6 pb-4 space-y-3 text-sm uppercase">
+      <a href="index.html" class="block py-2">Accueil</a>
+      <a href="about.html" class="block py-2 text-elegant-gold">Qui suis-je</a>
+      <a href="portfolio.html" class="block py-2">Mon Book</a>
+      <a href="expositions.html" class="block py-2">Expositions</a>
+      <a href="contact.html" class="block py-2">Contact</a>
+    </div>
+  </nav>
+
+  <main class="pt-28 pb-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <h1 class="font-serif text-5xl md:text-6xl text-center mb-16">Qui suis-je ?</h1>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-start mb-16">
+        <div>
+          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/04/20210801_214226_HDR-768x1024.jpg" alt="Sorelle M" class="w-full shadow-2xl">
+        </div>
+        <div class="prose prose-lg max-w-none">
+          <h2 class="font-serif text-3xl mb-6">Sorelle M</h2>
+          <p class="text-xl italic mb-6">Artiste peintre et Créatrice de la marque Madame Élégance</p>
+          <p>Sorelle M est née en 1996 à Makokou, au Gabon. Passionnée d’art depuis toujours, elle a grandi dans un environnement qui a nourri sa créativité et son amour pour la beauté et le design. En 2018, Sorelle est arrivée en France pour poursuivre ses études, mais elle a vite réalisé que son véritable appel était dans l’art.</p>
+          <p>Sorelle est devenue une artiste peintre talentueuse, créant des tableaux impressionnants à l’aide de différents matériaux tels que le bois d’okoumé, la résine et la peinture acrylique. Elle a commencé à peindre en 2020, lors du premier confinement en France, et depuis lors, elle s’est consacrée entièrement à la peinture. Avec une passion pour les couleurs, les formes et les textures, Sorelle crée des œuvres qui sont vibrantes, émotionnelles et qui transmettent une profondeur spirituelle.</p>
+        </div>
+      </div>
+
+      <div class="prose prose-lg max-w-none space-y-6">
+        <p>Son travail a rapidement été reconnu par le public et ses confrères, et elle a été invitée à exposer à l’UNESCO en France lors de la « Africa Week » en 2022, ainsi que dans divers lieux à Dieppe, Rouen et Paris. Les tableaux de Sorelle sont autant appréciés par les amateurs que par les collectionneurs d’art.</p>
+        <p>Sorelle est également une chrétienne évangélique fervente, qui considère la peinture comme une forme d’expression spirituelle. Elle croit que Dieu guide sa main lorsque qu’elle peint, et elle considère chaque tableau comme une prière. Sa foi est au cœur de tout ce qu’elle fait, y compris dans son art, et elle puise son inspiration dans sa relation avec Dieu.</p>
+        <p>En plus de sa passion pour l’art, Sorelle est également une amoureuse de la mode, du design et de la beauté en général. Elle trouve l’inspiration dans les détails de la vie quotidienne, dans les textures, les couleurs et les formes qu’elle observe autour d’elle.</p>
+        <p>En résumé, Sorelle M est une artiste peintre étonnante, née au Gabon, qui a trouvé sa passion pour l’art en France. Elle crée des tableaux vibrants et captivants qui sont imprégnés de sa spiritualité et de son amour pour la beauté et le design. Avec son talent indéniable et sa dévotion à son art, il est sûr que nous entendrons parler d’elle pendant de nombreuses années à venir.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-elegant-dark text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+      <div>
+        <h3 class="font-serif text-2xl mb-4">Madame Élégance</h3>
+        <p class="text-sm opacity-80">L'abstrait, l'originalité.</p>
+      </div>
+      <div>
+        <h4 class="uppercase tracking-widest text-sm mb-4">Navigation</h4>
+        <ul class="space-y-2 text-sm opacity-80">
+          <li><a href="index.html" class="hover:text-elegant-gold">Accueil</a></li>
+          <li><a href="portfolio.html" class="hover:text-elegant-gold">Mon Book</a></li>
+          <li><a href="expositions.html" class="hover:text-elegant-gold">Expositions</a></li>
+          <li><a href="contact.html" class="hover:text-elegant-gold">Contact</a></li>
+          <li><a href="privacy.html" class="hover:text-elegant-gold">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="uppercase tracking-widest text-sm mb-4">Contact</h4>
+        <p class="text-sm">contact@madame-elegance.com</p>
+        <div class="mt-4 space-y-1 text-sm">
+          <a href="https://www.instagram.com/mme_elegance/" target="_blank" class="block hover:text-elegant-gold">Instagram</a>
+          <a href="https://www.facebook.com/mme.elegance/" target="_blank" class="block hover:text-elegant-gold">Facebook</a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 text-center text-xs opacity-60">
+      © 2026 Madame Élégance – Sorelle M.
+    </div>
+  </footer>
+</body>
+</html>
