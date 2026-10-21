@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expositions | Madame Élégance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            elegant: {
+              dark: '#0f0f0f',
+              gold: '#c9a962',
+              cream: '#f8f6f1',
+              soft: '#e8e4d9',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-elegant-cream text-elegant-dark font-sans">
+  <nav class="fixed w-full z-50 bg-elegant-dark/90 backdrop-blur-md text-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="font-serif text-2xl font-bold tracking-wider">Madame Élégance</a>
+      <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+        <a href="index.html" class="hover:text-elegant-gold transition">Accueil</a>
+        <a href="about.html" class="hover:text-elegant-gold transition">Qui suis-je</a>
+        <a href="portfolio.html" class="hover:text-elegant-gold transition">Mon Book</a>
+        <a href="expositions.html" class="hover:text-elegant-gold transition text-elegant-gold">Expositions</a>
+        <a href="contact.html" class="hover:text-elegant-gold transition">Contact</a>
+      </div>
+      <button class="md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-elegant-dark px-6 pb-4 space-y-3 text-sm uppercase">
+      <a href="index.html" class="block py-2">Accueil</a>
+      <a href="about.html" class="block py-2">Qui suis-je</a>
+      <a href="portfolio.html" class="block py-2">Mon Book</a>
+      <a href="expositions.html" class="block py-2 text-elegant-gold">Expositions</a>
+      <a href="contact.html" class="block py-2">Contact</a>
+    </div>
+  </nav>
+
+  <main class="pt-28 pb-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <h1 class="font-serif text-5xl md:text-6xl text-center mb-16">Expositions</h1>
+
+      <div class="space-y-16">
+        <!-- 2023 -->
+        <article class="border-l-4 border-elegant-gold pl-8">
+          <h2 class="font-serif text-3xl mb-2">Journée nationale de la Femme Gabonaise</h2>
+          <p class="text-elegant-gold uppercase tracking-widest text-sm mb-4">Ambassade du Gabon en France • 20 avril 2023</p>
+          <p class="leading-relaxed mb-4">J’ai, à la demande de l’Ambassade du GABON en France et sous la conduite de Madame Erlyne Antonella NDEMBET DAMAS, Ministre du Ministère de la Justice, Garde des Sceaux, chargé des Droits de l’Homme et de l’Egalité des Genres, eu l’honneur d’exposer mes œuvres lors de la célébration de la Journée nationale de la Femme Gabonaise.</p>
+          <p class="leading-relaxed">J’ai pu réaliser plusieurs ventes à cette occasion. Je remercie l’Ambassade et son Excellence Madame Liliane Marat Massala Ambassadeur, Haut Représentant de la République gabonaise près la République française et Représentant du Gabon auprès de l’OIF pour cette opportunité.</p>
+        </article>
+
+        <!-- 2022 UNESCO -->
+        <article class="border-l-4 border-elegant-gold pl-8">
+          <h2 class="font-serif text-3xl mb-2">Africa Week</h2>
+          <p class="text-elegant-gold uppercase tracking-widest text-sm mb-4">UNESCO, Paris • 23 au 25 mai 2022</p>
+          <p class="leading-relaxed">J’ai eu l’honneur de représenter le Gabon lors de la semaine Africaine à l’Unesco. Plusieurs délégations officielles ont effectué le déplacement pour l’occasion dont Monsieur Max Samuel Oboumadjogo, le Ministre Délégué auprès du Ministre de l’Enseignement Supérieur, de la Recherche Scientifique, du Transfert de Technologie, de la Culture et des Arts.</p>
+        </article>
+
+        <!-- 2022 Rouen -->
+        <article class="border-l-4 border-elegant-gold pl-8">
+          <h2 class="font-serif text-3xl mb-2">Africa BOM</h2>
+          <p class="text-elegant-gold uppercase tracking-widest text-sm mb-4">Hôtel de Ville de Rouen • 5 au 25 mai 2022</p>
+          <p class="leading-relaxed">J’ai exposé deux toiles lors de l’exposition « Africa BOM » du 5 au 25 mai 2022 à l’Hôtel de Ville de Rouen. Son Excellence Madame Liliane Massala l’Ambassadeur Haut Représentant de la République Gabonaise en France nous a fait l’honneur de sa visite.</p>
+        </article>
+
+        <!-- 2021 -->
+        <article class="border-l-4 border-elegant-gold pl-8">
+          <h2 class="font-serif text-3xl mb-2">GABON EXPO 1ère Édition</h2>
+          <p class="text-elegant-gold uppercase tracking-widest text-sm mb-4">Paris • 15 au 17 août 2021</p>
+          <p class="leading-relaxed">J’ai participé à la 1ère édition de la « GABON EXPO » en 2021. J’y ai exposé quelques toiles et j’y ai fait de très belles rencontres !</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-elegant-dark text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <h3 class="font-serif text-2xl mb-4">Madame Élégance</h3>
+      <p class="text-sm opacity-80 mb-6">contact@madame-elegance.com</p>
+      <div class="flex justify-center space-x-6 text-sm">
+        <a href="index.html" class="hover:text-elegant-gold">Accueil</a>
+        <a href="portfolio.html" class="hover:text-elegant-gold">Mon Book</a>
+        <a href="contact.html" class="hover:text-elegant-gold">Contact</a>
+      </div>
+      <div class="mt-8 text-xs opacity-60">© 2026 Madame Élégance – Sorelle M.</div>
+    </div>
+  </footer>
+</body>
+</html>
