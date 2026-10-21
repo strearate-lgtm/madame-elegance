@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité | Madame Élégance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Inter', 'sans-serif'] },
+          colors: { elegant: { dark: '#0f0f0f', gold: '#c9a962', cream: '#f8f6f1' } }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-elegant-cream font-sans text-elegant-dark">
+  <nav class="fixed w-full z-50 bg-elegant-dark/90 backdrop-blur-md text-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="font-serif text-2xl font-bold">Madame Élégance</a>
+      <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+        <a href="index.html" class="hover:text-elegant-gold">Accueil</a>
+        <a href="about.html" class="hover:text-elegant-gold">Qui suis-je</a>
+        <a href="portfolio.html" class="hover:text-elegant-gold">Mon Book</a>
+        <a href="expositions.html" class="hover:text-elegant-gold">Expositions</a>
+        <a href="contact.html" class="hover:text-elegant-gold">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-28 pb-24 max-w-4xl mx-auto px-6">
+    <h1 class="font-serif text-4xl md:text-5xl mb-8">Politique de confidentialité</h1>
+    <p class="text-sm opacity-70 mb-8">Dernière mise à jour : 04 août 2023</p>
+    
+    <div class="prose prose-lg max-w-none space-y-6">
+      <p>Madame Élégance s'engage à protéger les données personnelles des visiteurs conformément à la législation française et au RGPD.</p>
+      <p>Les données sont collectées uniquement pour fournir des services (informations sur créations, réponses à questions), incluant nom, e-mail et éventuellement adresse. Utilisation limitée à l'exécution de demandes, obligations légales, consentement exprès ou intérêt légitime.</p>
+      <p>Les données ne sont ni vendues, ni louées, ni divulguées à des tiers sans contrainte légale ou consentement explicite.</p>
+      <p>Vous disposez des droits d'accès, de rectification, de suppression, de limitation, de portabilité et d'opposition. Pour exercer ces droits ou pour toute question : <a href="mailto:contact@madame-elegance.com" class="text-elegant-gold">contact@madame-elegance.com</a>.</p>
+      <p>L'utilisation du site implique le consentement à cette politique.</p>
+    </div>
+  </main>
+
+  <footer class="bg-elegant-dark text-white py-12 text-center text-sm">
+    <a href="index.html" class="hover:text-elegant-gold">Retour à l'accueil</a>
+    <p class="mt-4 opacity-60">© 2026 Madame Élégance</p>
+  </footer>
+</body>
+</html>
