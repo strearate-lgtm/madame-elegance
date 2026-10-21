@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madame Élégance | Sorelle M – Artiste</title>
+  <meta name="description" content="Sorelle M, artiste peintre gabonaise, créatrice de Madame Élégance. L'abstrait, l'originalité. Découvrez ses œuvres vibrantes et spirituelles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            elegant: {
+              dark: '#0f0f0f',
+              gold: '#c9a962',
+              cream: '#f8f6f1',
+              soft: '#e8e4d9',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-overlay { background: linear-gradient(to bottom, rgba(15,15,15,0.4), rgba(15,15,15,0.7)); }
+    .artwork-card:hover img { transform: scale(1.05); }
+    .artwork-card img { transition: transform 0.5s ease; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-elegant-cream text-elegant-dark font-sans">
+  <nav class="fixed w-full z-50 bg-elegant-dark/90 backdrop-blur-md text-white">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="font-serif text-2xl font-bold tracking-wider">Madame Élégance</a>
+      <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+        <a href="index.html" class="hover:text-elegant-gold transition">Accueil</a>
+        <a href="about.html" class="hover:text-elegant-gold transition">Qui suis-je</a>
+        <a href="portfolio.html" class="hover:text-elegant-gold transition">Mon Book</a>
+        <a href="expositions.html" class="hover:text-elegant-gold transition">Expositions</a>
+        <a href="contact.html" class="hover:text-elegant-gold transition">Contact</a>
+      </div>
+      <button class="md:hidden" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-elegant-dark px-6 pb-4 space-y-3 text-sm uppercase">
+      <a href="index.html" class="block py-2 hover:text-elegant-gold">Accueil</a>
+      <a href="about.html" class="block py-2 hover:text-elegant-gold">Qui suis-je</a>
+      <a href="portfolio.html" class="block py-2 hover:text-elegant-gold">Mon Book</a>
+      <a href="expositions.html" class="block py-2 hover:text-elegant-gold">Expositions</a>
+      <a href="contact.html" class="block py-2 hover:text-elegant-gold">Contact</a>
+    </div>
+  </nav>
+
+  <section class="relative h-screen flex items-center justify-center text-white">
+    <img src="https://www.madame-elegance.com/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-25-a-14.14.54-1920x1545.jpg" alt="Œuvre Madame Élégance" class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 hero-overlay"></div>
+    <div class="relative z-10 text-center px-6 max-w-4xl">
+      <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold mb-4 tracking-tight">Madame Élégance</h1>
+      <p class="text-xl md:text-2xl font-light tracking-widest mb-8">L'abstrait, l'originalité.</p>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 opacity-90">Sorelle M – Artiste peintre et créatrice</p>
+      <a href="portfolio.html" class="inline-block border border-elegant-gold text-elegant-gold px-10 py-4 uppercase tracking-widest text-sm hover:bg-elegant-gold hover:text-elegant-dark transition duration-300">Découvrir le Book</a>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 max-w-5xl mx-auto text-center">
+    <h2 class="font-serif text-4xl md:text-5xl mb-8">Sorelle M</h2>
+    <p class="text-lg leading-relaxed mb-6">Gabonaise, officiellement artiste peintre depuis 2020. Le premier confinement, ce moment hors du temps, m’a permis de me lancer pleinement dans la création. J’ai pu en profiter pour méditer, penser puis créer.</p>
+    <p class="text-lg leading-relaxed mb-6">Depuis toujours, je suis attirée par l’art et tout ce qui s’y rattache. J’aime la mode et la décoration d’intérieur, je m’épanouis dans l’élaboration de nouveaux designs. C’est pourquoi, l’idée de créer ma propre marque m’est apparue : « Madame Élégance ».</p>
+    <p class="text-lg leading-relaxed">Je laisse place à mon imagination dans toutes mes productions. Mes origines Gabonaises influencent considérablement mon travail. J’aime à mêler décoration, mode et peinture autant que peindre de l’abstrait. Mon coup de pinceau n’est jamais arbitraire, je reste guidée par le Saint-Esprit, pour la gloire de Dieu.</p>
+    <a href="about.html" class="inline-block mt-10 text-elegant-gold border-b border-elegant-gold pb-1 hover:text-elegant-dark hover:border-elegant-dark transition">En savoir plus →</a>
+  </section>
+
+  <section class="py-16 bg-elegant-soft">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="font-serif text-4xl text-center mb-12">Œuvres sélectionnées</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="artwork-card overflow-hidden bg-white shadow-lg">
+          <img src="https://www.madame-elegance.com/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-25-a-14.14.55.jpg" alt="Œuvre abstraite" class="w-full h-80 object-cover">
+        </div>
+        <div class="artwork-card overflow-hidden bg-white shadow-lg">
+          <img src="https://www.madame-elegance.com/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-25-a-14.14.52-1920x1584.jpg" alt="Œuvre texturée" class="w-full h-80 object-cover">
+        </div>
+        <div class="artwork-card overflow-hidden bg-white shadow-lg">
+          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/12/IMG_20220520_161203101-1.jpg" alt="Exposition" class="w-full h-80 object-cover">
+        </div>
+        <div class="artwork-card overflow-hidden bg-white shadow-lg">
+          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/12/285314727_3192437311031592_160629439069303312_n-1920x1280.jpg" alt="Œuvre" class="w-full h-80 object-cover">
+        </div>
+        <div class="artwork-card overflow-hidden bg-white shadow-lg">
+          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/12/IMG_20220523_122502-1.jpg" alt="Création" class="w-full h-80 object-cover">
+        </div>
+        <div class="artwork-card overflow-hidden bg-white shadow-lg">
+          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/12/IMG_20220523_103412.jpg" alt="Tableau" class="w-full h-80 object-cover">
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="portfolio.html" class="inline-block bg-elegant-dark text-white px-10 py-4 uppercase tracking-widest text-sm hover:bg-elegant-gold hover:text-elegant-dark transition duration-300">Voir tout le Book</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-elegant-dark text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+      <div>
+        <h3 class="font-serif text-2xl mb-4">Madame Élégance</h3>
+        <p class="text-sm opacity-80">L'abstrait, l'originalité.<br>Sorelle M – Artiste peintre</p>
+      </div>
+      <div>
+        <h4 class="uppercase tracking-widest text-sm mb-4">Navigation</h4>
+        <ul class="space-y-2 text-sm opacity-80">
+          <li><a href="about.html" class="hover:text-elegant-gold">Qui suis-je</a></li>
+          <li><a href="portfolio.html" class="hover:text-elegant-gold">Mon Book</a></li>
+          <li><a href="expositions.html" class="hover:text-elegant-gold">Expositions</a></li>
+          <li><a href="contact.html" class="hover:text-elegant-gold">Contact</a></li>
+          <li><a href="privacy.html" class="hover:text-elegant-gold">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="uppercase tracking-widest text-sm mb-4">Suivez-moi</h4>
+        <div class="space-y-2 text-sm">
+          <a href="https://www.facebook.com/mme.elegance/" target="_blank" class="block hover:text-elegant-gold">Facebook</a>
+          <a href="https://www.instagram.com/mme_elegance/" target="_blank" class="block hover:text-elegant-gold">Instagram</a>
+          <a href="https://www.tiktok.com/@madame_elegance" target="_blank" class="block hover:text-elegant-gold">TikTok</a>
+        </div>
+        <p class="mt-6 text-sm opacity-80">contact@madame-elegance.com</p>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-white/20 text-center text-xs opacity-60">
+      © 2026 Madame Élégance – Sorelle M. Tous droits réservés.
+    </div>
+  </footer>
+</body>
+</html>
