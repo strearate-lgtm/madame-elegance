@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -29,9 +30,42 @@
     }
   </script>
   <style>
-    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 100; align-items: center; justify-content: center; }
-    .lightbox.active { display: flex; }
-    .lightbox img { max-width: 90%; max-height: 90%; object-fit: contain; }
+    #book {
+      margin: 0 auto;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    }
+    .page {
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .page img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .controls button {
+      background: #0f0f0f;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.875rem;
+      transition: all 0.3s;
+    }
+    .controls button:hover {
+      background: #c9a962;
+      color: #0f0f0f;
+    }
   </style>
 </head>
 <body class="bg-elegant-cream text-elegant-dark font-sans">
@@ -59,64 +93,56 @@
   </nav>
 
   <main class="pt-28 pb-24">
-    <div class="max-w-7xl mx-auto px-6">
-      <h1 class="font-serif text-5xl md:text-6xl text-center mb-6">Mon Book</h1>
-      <p class="text-center text-lg mb-16 max-w-2xl mx-auto">Book Edition 2024 – Découvrez une sélection d'œuvres abstraites et originales, mêlant peinture, textures et influences gabonaises.</p>
+    <div class="max-w-5xl mx-auto px-6">
+      <h1 class="font-serif text-5xl md:text-6xl text-center mb-4">Mon Book</h1>
+      <p class="text-center text-lg mb-8 max-w-2xl mx-auto">Book Edition 2024 – Feuilletez le livre complet directement ici.</p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="gallery">
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-25-a-14.14.54-1920x1545.jpg" alt="Œuvre 1" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-25-a-14.14.55.jpg" alt="Œuvre 2" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-25-a-14.14.52-1920x1584.jpg" alt="Œuvre 3" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-25-a-14.14.53-1-1920x1599.jpg" alt="Œuvre 4" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2023/07/WhatsApp-Image-2023-04-25-a-14.14.51-1-768x566-1.jpg" alt="Œuvre 5" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/12/IMG-20210820-WA0086_2.jpg" alt="Œuvre 6" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/12/IMG_20220520_161203101-1.jpg" alt="Œuvre 7" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/12/285314727_3192437311031592_160629439069303312_n-1920x1280.jpg" alt="Œuvre 8" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/12/IMG_20220523_122502-1.jpg" alt="Œuvre 9" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/12/IMG_20220523_103412.jpg" alt="Œuvre 10" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/12/VID_20220524_144004-1.jpg" alt="Œuvre 11" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
-        <div class="overflow-hidden cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
-          <img src="https://www.madame-elegance.com/wp-content/uploads/2022/12/VID_20220524_143840-1.jpg" alt="Œuvre 12" class="w-full h-96 object-cover hover:scale-105 transition duration-500">
-        </div>
+      <div id="book" class="mx-auto"></div>
+
+      <div class="controls">
+        <button id="prev">Page précédente</button>
+        <button id="next">Page suivante</button>
       </div>
+      <p class="text-center mt-4 text-sm opacity-70" id="page-info">Page 1 / 49</p>
     </div>
   </main>
 
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <img id="lightbox-img" src="" alt="Agrandissement">
-  </div>
-
   <script>
-    function openLightbox(src) {
-      document.getElementById('lightbox-img').src = src;
-      document.getElementById('lightbox').classList.add('active');
+    const pageFlip = new St.PageFlip(document.getElementById('book'), {
+      width: 550,
+      height: 733,
+      size: 'stretch',
+      minWidth: 300,
+      maxWidth: 800,
+      minHeight: 400,
+      maxHeight: 1000,
+      maxShadowOpacity: 0.5,
+      showCover: true,
+      mobileScrollSupport: false
+    });
+
+    // Generate page elements (images will be loaded from /book/)
+    const pages = [];
+    for (let i = 1; i <= 49; i++) {
+      const page = document.createElement('div');
+      page.className = 'page';
+      const img = document.createElement('img');
+      const num = String(i).padStart(2, '0');
+      img.src = `book/page-${num}.jpg`;
+      img.alt = `Page ${i}`;
+      page.appendChild(img);
+      pages.push(page);
     }
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('active');
-    }
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+    pageFlip.loadFromHTML(pages);
+
+    document.getElementById('prev').addEventListener('click', () => pageFlip.flipPrev());
+    document.getElementById('next').addEventListener('click', () => pageFlip.flipNext());
+
+    pageFlip.on('flip', (e) => {
+      const current = e.data + 1;
+      document.getElementById('page-info').textContent = `Page ${current} / 49`;
+    });
   </script>
 
   <footer class="bg-elegant-dark text-white py-16 px-6">
